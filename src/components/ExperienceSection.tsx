@@ -1,71 +1,76 @@
 import { motion } from "framer-motion";
-import { Briefcase, CheckCircle } from "lucide-react";
+import { Briefcase, CheckCircle, ExternalLink, Globe } from "lucide-react";
 
 const experiences = [
   {
     company: "PT. Digital Daya Teknologi",
+    url: "https://ddt.id/",
     role: "Senior Software Engineer, Backend",
     period: "Nov 2022 - Present",
-    location: "Jakarta",
-    description: "Leading development of cross-border QR payments, virtual accounts, and bill payment platforms.",
+    location: "Jakarta, Indonesia (Hybrid) 🇮🇩",
+    description: "Built cross-border QR payment systems, virtual account payment systems, and bill payment platforms.",
     achievements: [
       "Expanded payment coverage to 5 countries via cross-border QR payment system",
       "Reduced system memory usage by 50%",
       "Reduced infrastructure costs through scalable adapter design",
     ],
-    tech: ["Golang", "Microservices", "Datadog", "PostgreSQL"],
+    tech: ["Golang", "AngularJS", "PostgreSQL", "Redis", "Kafka", "Datadog", "REST API", "Third-party Integration"],
   },
   {
     company: "LinkAja",
+    url: "https://linkaja.id/",
     role: "Senior Software Engineer, Backend",
     period: "Jan 2021 - Oct 2022",
-    location: "Jakarta",
+    location: "Jakarta, Indonesia (Remote) 🇮🇩",
     description: "Built P2P lending platform and Open API platform compliant with SNAP standards.",
     achievements: [
       "Enabled financing access for farmers through digital P2P lending",
       "Reduced partner onboarding time by ~40% with SNAP-compliant APIs",
       "Delivered a stable P2P lending platform",
     ],
-    tech: ["Golang", "REST API", "SNAP", "Third-party Integration"],
+    tech: ["Golang", "PostgreSQL", "Redis", "Kafka", "REST API", "gRPC", "SNAP", "Third-party Integration"],
   },
   {
     company: "Tokopedia",
+    url: "https://www.tokopedia.com/",
     role: "Software Engineer, Backend",
     period: "Feb 2019 - Dec 2020",
-    location: "Jakarta",
+    location: "Jakarta, Indonesia (On-Site) 🇮🇩",
     description: "Integrated bank payment methods and built digital onboarding features.",
     achievements: [
       "Delivered 3 bank host-to-host integrations (BSI, BTN, BNI)",
       "Enabled Virtual Account and direct debit payment channels",
       "100% digital bank account onboarding, eliminating in-branch visits",
     ],
-    tech: ["Golang", "Host-to-Host", "Virtual Account", "Payment Gateway"],
+    tech: ["Golang", "PostgreSQL", "Redis", "Kafka", "REST API", "Third-party Integration"],
   },
   {
     company: "BJTech",
+    url: "https://balesin.id/",
     role: "Software Engineer, Backend",
     period: "Jan 2018 - Jan 2019",
-    location: "Jakarta",
+    location: "Jakarta, Indonesia (On-Site) 🇮🇩",
     description: "Developed sales chatbot and coupon redemption systems for major brands.",
     achievements: [
       "Reduced manual sales operations through chatbot automation",
       "Supported high-volume promo campaigns for Frestea & Coca-Cola",
       "Improved redemption reliability through automated validation",
     ],
-    tech: ["Python", "Node.js", "LINE Messenger", "Chatbot"],
+    tech: ["Python", "Node.js", "Rivescript", "LINE Messenger", "Chatbot"],
   },
   {
     company: "PT Dua Empat Tujuh",
+    url: "https://solusi247.com/",
     role: "Data Engineer",
     period: "Jun 2014 - Dec 2017",
-    location: "Jakarta",
+    location: "Jakarta, Indonesia (On-Site) 🇮🇩",
     description: "Built ETL pipelines for Telkomsel's broadband performance monitoring.",
     achievements: [
       "Improved broadband monitoring accuracy for enterprise-scale telco data",
       "Reduced manual reporting effort through automation",
       "Prevented pipeline bottlenecks through proactive monitoring",
     ],
-    tech: ["Hadoop", "SQL", "Shell Scripting", "ETL"],
+    tech: ["Hadoop", "SQL", "Teradata", "MySQL", "Shell Scripting", "ETL", "Bash"],
   },
 ];
 
@@ -92,9 +97,6 @@ const ExperienceSection = () => {
           <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4">
             Professional <span className="text-gradient">Experience</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-xl">
-            Building scalable fintech and payment systems across Indonesia's leading tech companies.
-          </p>
         </motion.div>
 
         <motion.div
@@ -119,10 +121,33 @@ const ExperienceSection = () => {
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-4">
                     <div>
                       <h3 className="font-heading text-xl font-bold text-foreground">{exp.role}</h3>
-                      <p className="text-primary font-medium">{exp.company}</p>
+                      <p className="text-primary font-medium">
+                        {exp.url ? (
+                          <a
+                            href={exp.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="hover:text-primary/80 transition-colors inline-flex items-center gap-1 group/link"
+                          >
+                            {exp.company}
+                            <ExternalLink
+                              size={14}
+                              className="opacity-0 group-hover/link:opacity-100 transition-opacity"
+                            />
+                          </a>
+                        ) : (
+                          exp.company
+                        )}
+                      </p>
                     </div>
-                    <div className="text-sm text-muted-foreground whitespace-nowrap">
-                      {exp.period} · {exp.location}
+                    <div className="flex flex-col items-start md:items-end gap-2">
+                      <span className="px-4 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 text-sm font-bold whitespace-nowrap">
+                        {exp.period}
+                      </span>
+                      <div className="flex items-center gap-1.5 text-muted-foreground text-sm">
+                        <Globe size={16} className="text-slate-400" />
+                        <span>{exp.location}</span>
+                      </div>
                     </div>
                   </div>
 

@@ -6,20 +6,20 @@ const skillCategories = [
     skills: ["Golang (primary)", "RESTful API Design", "Microservices", "Clean Architecture"],
   },
   {
+    title: "Programming Languages",
+    skills: ["Golang (primary)", "AngularJS", "NodeJS", "Python", "Shell Scripting", "Bash", "Hadoop"],
+  },
+  {
+    title: "Databases & Storage",
+    skills: ["PostgreSQL", "MySQL", "Redis", "SQL", "Teradata"],
+  },
+  {
     title: "Payment & Fintech",
     skills: ["Virtual Account", "QR Payments", "Cross-border Payments", "Host-to-Host Integration", "SNAP Open API"],
   },
   {
-    title: "Databases & Storage",
-    skills: ["PostgreSQL", "MySQL", "Redis", "SQL"],
-  },
-  {
     title: "System Integration",
     skills: ["Third-party APIs", "Banking APIs", "Payment Gateways", "Partner Onboarding"],
-  },
-  {
-    title: "Programming Languages",
-    skills: ["Golang", "JavaScript", "Python", "Shell Scripting"],
   },
   {
     title: "Soft Skills",
@@ -50,9 +50,6 @@ const SkillsSection = () => {
           <h2 className="font-heading text-4xl md:text-5xl font-bold mb-4">
             Skills & <span className="text-gradient">Expertise</span>
           </h2>
-          <p className="text-muted-foreground text-lg max-w-xl">
-            Technologies and competencies honed across 9+ years of backend engineering.
-          </p>
         </motion.div>
 
         <motion.div

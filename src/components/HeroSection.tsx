@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { MapPin, Mail, Linkedin, Terminal, User } from "lucide-react";
+import personalPhoto from "../assets/personal-photo.jpg";
 
 const HeroSection = () => {
   return (
@@ -51,11 +52,11 @@ const HeroSection = () => {
             >
               <span className="flex items-center gap-1.5">
                 <MapPin size={16} className="text-primary" />
-                Jakarta, Indonesia
+                Malang, Indonesia
               </span>
               <span className="flex items-center gap-1.5">
                 <Terminal size={16} className="text-primary" />
-                9+ Years Experience
+                7+ Years Experience
               </span>
             </motion.div>
 
@@ -65,9 +66,9 @@ const HeroSection = () => {
               transition={{ delay: 0.7 }}
               className="text-muted-foreground text-lg leading-relaxed max-w-2xl mb-10"
             >
-              Backend Software Engineer with 9+ years of experience in financial services, 
-              e-commerce, and MSME-focused products. Specialized in developing scalable fintech 
-              and payment systems using Golang. Experienced in designing high-traffic APIs and 
+              Backend Software Engineer with 7+ years of experience in financial services,
+              e-commerce, and MSME-focused products. Specialized in developing scalable fintech
+              and payment systems using Golang. Experienced in designing high-traffic APIs and
               building reliable distributed backend systems.
             </motion.p>
 
@@ -106,8 +107,11 @@ const HeroSection = () => {
             {/* Profile photo placeholder */}
             <div className="relative">
               <div className="w-56 h-56 md:w-72 md:h-72 rounded-full border-4 border-primary/20 overflow-hidden bg-muted flex items-center justify-center shadow-card">
-                {/* Replace the User icon with an <img> tag pointing to your photo */}
-                <User size={80} className="text-muted-foreground/50" />
+                <img
+                  src={personalPhoto}
+                  alt="Ananda Dwi Rahma"
+                  className="w-full h-full object-cover"
+                />
               </div>
               {/* Decorative ring */}
               <div className="absolute inset-0 rounded-full border-2 border-primary/10 scale-110" />
@@ -116,18 +120,13 @@ const HeroSection = () => {
             {/* Stats card */}
             <div className="glass rounded-2xl p-6 shadow-card space-y-4 w-64">
               <div className="text-center">
-                <div className="text-3xl font-heading font-bold text-gradient">9+</div>
+                <div className="text-3xl font-heading font-bold text-gradient">7+</div>
                 <div className="text-sm text-muted-foreground mt-1">Years Experience</div>
               </div>
               <div className="h-px bg-border" />
               <div className="text-center">
                 <div className="text-3xl font-heading font-bold text-gradient">5</div>
                 <div className="text-sm text-muted-foreground mt-1">Companies</div>
-              </div>
-              <div className="h-px bg-border" />
-              <div className="text-center">
-                <div className="text-3xl font-heading font-bold text-gradient">50%</div>
-                <div className="text-sm text-muted-foreground mt-1">Memory Reduction</div>
               </div>
             </div>
           </motion.div>
