@@ -67,9 +67,8 @@ const HeroSection = () => {
               className="text-muted-foreground text-lg leading-relaxed max-w-2xl mb-10"
             >
               Backend Software Engineer with 7+ years of experience in financial services,
-              e-commerce, and MSME-focused products. Specialized in developing scalable fintech
-              and payment systems using Golang. Experienced in designing high-traffic APIs and
-              building reliable distributed backend systems.
+              e-commerce, and MSME-focused products. Experienced in building scalable fintech and payment systems using Golang.
+              Passionate about software development and continuously exploring AI to develop effective and scalable solutions.
             </motion.p>
 
             <motion.div
