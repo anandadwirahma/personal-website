@@ -41,7 +41,7 @@ const HeroSection = () => {
               transition={{ delay: 0.5 }}
               className="font-heading text-xl md:text-2xl text-secondary-foreground font-medium mb-6"
             >
-              Senior Backend Software Engineer
+              Backend Software Engineer
             </motion.h2>
 
             <motion.div
