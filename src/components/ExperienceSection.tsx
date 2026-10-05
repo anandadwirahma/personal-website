@@ -3,10 +3,24 @@ import { Briefcase, CheckCircle, ExternalLink, Globe } from "lucide-react";
 
 const experiences = [
   {
+    company: "PT. GTech Digital Asia",
+    url: "https://gtech.digital/",
+    role: "Software Engineer, Backend - Freelance",
+    period: "May 2026 - Present",
+    location: "Jakarta, Indonesia (Remote) 🇮🇩",
+    description: "Developed and maintained Golang backend services for Bank Ganesha's internal CMS and corporate website.",
+    achievements: [
+      "Improved content publishing with a maker-checker approval workflow, so content is reviewed before it goes live",
+      "Improved CMS security with role-based access control and approval permissions",
+      "Made backend services easier to maintain and scale with Clean Architecture and reusable components",
+    ],
+    tech: ["Golang", "PostgreSQL", "Redis", "REST API"],
+  },
+  {
     company: "PT. Digital Daya Teknologi",
     url: "https://ddt.id/",
     role: "Senior Software Engineer, Backend",
-    period: "Nov 2022 - Present",
+    period: "Nov 2022 - Feb 2026",
     location: "Jakarta, Indonesia (Hybrid) 🇮🇩",
     description: "Built cross-border QR payment systems, virtual account payment systems, and bill payment platforms.",
     achievements: [
