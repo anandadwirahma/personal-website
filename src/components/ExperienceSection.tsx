@@ -25,7 +25,7 @@ const experiences = [
     description: "Built cross-border QR payment systems, virtual account payment systems, and bill payment platforms.",
     achievements: [
       "Expanded payment coverage to 5 countries via cross-border QR payment system",
-      "Reduced system memory usage by 50%",
+      "Improved system memory efficiency",
       "Reduced infrastructure costs through scalable adapter design",
     ],
     tech: ["Golang", "AngularJS", "PostgreSQL", "Redis", "Kafka", "Datadog", "REST API", "Third-party Integration"],
